@@ -1,6 +1,8 @@
 const prompt = require('inquirer').createPromptModule()
 const fs = require('fs')
 const axios = require('axios')
+const api = require('./utils/api.js')
+const generateMarkdown = require('./utils/generateMarkdown.js')
 
 const questions = [
   'What is your GitHub username?:',
@@ -76,13 +78,10 @@ function init() {
       contributing: response.contributing,
       tests: response.tests
     }
-
-
-
   })
 }
 
-function writeToFile(fileName, data) {
+function writeToFile('README.md', data) {
 }
 
 
